@@ -1,0 +1,24 @@
+{
+  "name": "GuessGame",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AbyChan/Guess-Game",
+  "authors": [
+    "AbyChan <crystal.tyan@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.17",
+    "zeptojs": "~1.1.6",
+    "jquery": "~2.1.4"
+  }
+}
