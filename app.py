@@ -1,9 +1,9 @@
-from flask import Flask, request, redirect, url_for, send_from_directory
+from flask import Flask, request, send_from_directory
 import redis
 import hashlib
 import json
 
-app = Flask(__name__, static_url_path='/static', static_folder='dest')
+app = Flask('GuessGame', static_url_path='/static', static_folder='dest')
 
 setting = {
     'db_host': 'localhost',
@@ -18,9 +18,9 @@ def root():
     return app.send_static_file('index.html')
 
 
-def hello():
-    return u'Hello, I\' m Yes or No Guess-Game Server,' + \
-           u' Dont\' attack me ^_^'
+# def hello():
+#     return u'Hello, I\' m Yes or No Guess-Game Server,' + \
+#            u' Dont\' attack me ^_^'
 
 @app.route('/entity', methods=['POST'])
 def postEntity():
@@ -60,7 +60,31 @@ def getEntity():
         return json.dumps({'miss': 'not found'})
     return r.hget(setting['scheme'], entityKey)
 
-
+@app.route('/init')
+def initDB():
+    #insert root key
+    r.hset(setting['scheme'], 'root', json.dumps({
+        'isLeaf': 'false',
+        'question': 'Is a thing?',
+        'yesKey': 'bro',
+        'nopeKey': 'sister',
+        'parent': 'null',
+    }))
+    r.hset(setting['scheme'], 'bro', json.dumps({
+        'isLeaf': 'true',
+        'object': 'Rock',
+        'yesKey': "null",
+        'nopeKey': "null",
+        'parent': 'root'
+    }))
+    r.hset(setting['scheme'], 'sister', json.dumps({
+        'isLeaf': 'true',
+        'object': 'Dog',
+        'yesKey': 'null',
+        'nopeKey': 'null',
+        'parent': 'root'
+    }))
+    return json.dumps({'success': 'init db success!'})
 
 if __name__ == '__main__':
     app.debug = True
