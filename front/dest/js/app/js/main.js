@@ -168,3 +168,4 @@ requirejs(['fastclick.min', 'cola', 'zepto.min'],
         });
 
     });
+.

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/****************fancy***************/
+@font-face {
+  font-family: GoodDog;
+  src: url('/font/fancy/GoodDog.otf'); }
+
+@font-face {
+  font-family: ChunkFive;
+  src: url('/font/fancy/Chunkfive.otf'); }
+
+@font-face {
+  font-family: DaysLater;
+  src: url('/font/fancy/28DaysLater.ttf'); }
+
+@font-face {
+  font-family: Canon;
+  src: url('/font/fancy/CANON.ttf'); }
+
+@font-face {
+  font-family: Angelina;
+  src: url('/font/fancy/angelina.ttf'); }
+
+@font-face {
+  font-family: FaceYourFears;
+  src: url('/font/fancy/FaceYourFears.ttf'); }
+
+@font-face {
+  font-family: SketchRockwell;
+  src: url('/font/fancy/SketchRockwell-Bold.ttf'); }
+
+@font-face {
+  font-family: WaltographUI;
+  src: url('/font/fancy/waltographUI.ttf'); }
+
+@font-face {
+  font-family: FlowerBold;
+  src: url('/font/fancy/FlowerBold.ttf'); }
+
+@font-face {
+  font-family: INDIGO;
+  src: url('/font/fancy/INDIGO.ttf'); }
+
+/****************offcial*******************/
+@font-face {
+  font-family: Economica-Regulaer;
+  src: url('/font/official/Economica-Regular-OTF.otf'); }
+
+@font-face {
+  font-family: Economica-Bold;
+  src: url('/font/official/Economica-Bold-OTF.otf'); }
+
+@font-face {
+  font-family: Economica-Italic;
+  src: url('/font/official/Economica-Italic-OTF.otf'); }
+
+@font-face {
+  font-family: Economica-BoldItalic;
+  src: url('/font/official/Economica-BoldItalic-OTF.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Bold;
+  src: url('/font/official/BebasNeue Bold.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Light;
+  src: url('/font/official/BebasNeue Light.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Book;
+  src: url('/font/official/BebasNeue Book.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Regular;
+  src: url('/font/official/BebasNeue Regular.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Thin;
+  src: url('/font/official/BebasNeue Thin.otf'); }
+
+@font-face {
+  font-family: KelsonSans-Bold;
+  src: url('/font/official/Kelson Sans Bold.otf'); }
+
+@font-face {
+  font-family: KelsonSans-Light;
+  src: url('/font/official/Kelson Sans Light.otf'); }
+
+@font-face {
+  font-family: KelsonSans-Regular;
+  src: url('/font/official/Kelson Sans Regular.otf'); }
+
+/***********chinese**************/
+@font-face {
+  font-family: FangzhengXianxi;
+  src: url('/font/chinese/方正正纤黑简体.ttf'); }
+
+@font-face {
+  font-family: HanyiQuanTang;
+  src: url('/font/chinese/汉仪全唐诗体简.ttf'); }
+
+@font-face {
+  font-family: LvJianDeXingKai;
+  src: url('/font/chinese/方正字迹-吕建德行楷简体.ttf'); }
+
+@font-face {
+  font-family: DianYaKaiTi;
+  src: url('/font/chinese/方正字迹-典雅楷体简体.ttf'); }
+
+@font-face {
+  font-family: YueSong;
+  src: url('/font/chinese/方正清刻本悦宋简体.TTF'); }
+
+@font-face {
+  font-family: YouCan;
+  src: url('/font/chinese/方正幼线简体.ttf'); }
+
+@font-face {
+  font-family: BenXiu;
+  src: url('/font/chinese/方正宋刻本秀楷简体.TTF'); }
+
+@font-face {
+  font-family: OuTi;
+  src: url('/font/chinese/歐體楷書.otf'); }
+
+@font-face {
+  font-family: SongSan;
+  src: url('/font/chinese/方正宋三_GBK.ttf'); }

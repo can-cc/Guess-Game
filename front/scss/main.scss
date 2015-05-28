@@ -1,20 +1,214 @@
+/*****************animate**********/
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes bounceOutDown {
+    40%, 45% {
+        opacity: 1;
+        transform: translate3d(0, -20px, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 2000px, 0);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.fadeIn {
+    animation-name: fadeIn;
+}
+.bounceOutDown {
+    animation-name: bounceOutDown;
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.fadeOut {
+    animation-name: fadeOut;
+}
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        transform: translate3d(0, -4px, 0);
+    }
+}
+.bounce {
+    animation-name: bounce;
+    transform-origin: center bottom;
+}
+/**************animate end***************/
+
 .full-container {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  background: {
-  color: #D96459;
-  }
-  }
-
-.welcome {
-  position: relative;
-  top: 40%;
-  transform: translate(0, -50%);
-  }
-
-#nameinput {
-  height: 3rem;
-  font-size: 2rem;
-  }
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: {
+        color: #D96459;
+    }
+}
+#welcome {
+    position: relative;
+    top: 45%;
+    transform: translate(0, -50%);
+    overflow: hidden;
+    #welcometext {
+        font: {
+            size: 3rem;
+            family: GoodDog;
+        }
+        & {
+            overflow: hidden;
+        }
+    }
+    #readyButton {
+        background-color: #FFD041;
+        display: block;
+        margin: auto auto;
+        margin-top: 3rem;
+    }
+}
+#pretip {
+    display: none;
+    #pretiptext {
+        font: {
+            family: GoodDog;
+            size: 3rem;
+        }
+    }
+    #reciprocal {
+        font: {
+            family: GoodDog;
+            size: 6rem;
+        }
+        color:#6E9ECF;
+    }
+}
+#nameinput,
+#thinkingThing,
+#helpQuestion {
+    height: 3rem;
+    font: {
+        size: 2rem;
+        family: GoodDog;
+    }
+    &:focus,
+    &:active {
+        border-color: #fff;
+    }
+}
+#main {
+    display: none;
+    .main-top {
+        #question {
+            text-align: center;
+            font: {
+                family: Canon;
+                size: 3.5rem;
+            }
+        }
+    }
+    .main-bottom {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        & > div {
+            a {
+                display: block;
+                margin: auto auto;
+            }
+            margin:auto;
+        }
+    }
+}
+#winResult {
+    display: none;
+    #winMsg {
+        margin-top: 30%;
+        text-align: center;
+        font-family: GoodDog;
+        font-size: 3rem;
+    }
+    #winBottom {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        & > a {
+            display: block;
+            margin: auto auto;
+        }
+    }
+}
+#loseResult {
+    display: none;
+    #loseMsg {
+        margin-top: 30%;
+        text-align: center;
+        font-family: GoodDog;
+        font-size: 3rem;
+    }
+    #loseBottom {
+        position: absolute;
+        bottom: 22%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        & > a {
+            display: block;
+            margin: auto auto;
+        }
+    }
+}
+#helpMe {
+    display: none;
+    #helpMsg {
+        margin-top: 30%;
+        text-align: center;
+        font-family: GoodDog;
+        font-size: 3rem;
+    }
+    #helpBottom {
+        font-family: GoodDog;
+        text-align: center;
+    }
+}
+#thank {
+    display: none;
+    #thankMsg {
+        margin-top: 30%;
+        text-align: center;
+        font-family: GoodDog;
+        font-size: 3rem;
+    }
+    #thankBottom {
+        margin-top: 15%;
+        font-family: GoodDog;
+        text-align: center;
+    }
+}
