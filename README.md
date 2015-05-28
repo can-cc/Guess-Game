@@ -3,10 +3,10 @@
 ##It is a YES-OR-NO Guess Game.
 ####backend is build with Python Flask and Redis.
 ##How to run
----   clone down
----   open redis
----   install Flask, redis with pip
----   run python app.py in terminal
+-   clone down
+-   open redis
+-   install Flask, redis with pip
+-   run python app.py in terminal
 ##screenshot
 ![Alt text](https://raw.githubusercontent.com/AbyChan/Guess-Game/master/screenshot/1432797601172.gif)
 ![Alt text](https://raw.githubusercontent.com/AbyChan/Guess-Game/master/screenshot/1432797645368.gif)
