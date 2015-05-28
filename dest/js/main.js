@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl: 'js/vendor',
+    baseUrl: 'static/js/vendor',
     paths: {
         app: '../'
     }
@@ -168,4 +168,3 @@ requirejs(['fastclick.min', 'cola', 'zepto.min'],
         });
 
     });
-.

@@ -2,7 +2,8 @@ from flask import Flask, request, redirect, url_for, send_from_directory
 import redis
 import hashlib
 import json
-app = Flask('Guess-Game')
+
+app = Flask(__name__, static_url_path='/static', static_folder='dest')
 
 setting = {
     'db_host': 'localhost',
@@ -12,7 +13,11 @@ setting = {
 
 r = redis.StrictRedis(host='localhost', port=6379, db=0)
 
-# @app.route('/')
+@app.route('/')
+def root():
+    return app.send_static_file('index.html')
+
+
 def hello():
     return u'Hello, I\' m Yes or No Guess-Game Server,' + \
            u' Dont\' attack me ^_^'
@@ -55,14 +60,6 @@ def getEntity():
         return json.dumps({'miss': 'not found'})
     return r.hget(setting['scheme'], entityKey)
 
-@app.route('/')
-def root():
-  return app.send_static_file('front/app/index.html')
-
-
-def static_proxy(path):
-  # send_static_file will guess the correct MIME type
-  return app.send_static_file(path)
 
 
 if __name__ == '__main__':

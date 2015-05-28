@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>GuessGame</title>
+
+    <link rel="stylesheet" href="static/css/vendor/cola.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/fonts.css">
+</head>
+
+<body>
+    <div class="full-container">
+
+        <div id="welcome">
+            <div class="row">
+                <div class="col-xs-6 col-center .visible-sm-*">
+                    <div class="form-group" style="overflow:hidden;">
+                        <div style="overflow:hidden;">
+                            <h2 id="welcometext" class="center-text">
+                  Bro, tell me your name.
+                            </h2>
+                        </div>
+                        <input id="nameinput" type="text" class="form-control center-text underline" placeholder="Name">
+                        <a class="waves-effect waves-light btn xlarge strong circle center-text" id="readyButton">Ready</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pretip">
+            <div class="row">
+                <div class="col-xs-8 col-center">
+                    <p id="pretiptext" class="center-text">Keep something in your mind, and answer my question, I will know it.</p>
+                    <h1 id="reciprocal" class="center-text">
+                    3
+                </h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="main-top">
+                <div id="question">
+                    <p>
+                        Is it a thing?
+                    </p>
+                </div>
+            </div>
+            <div class="main-bottom">
+                <div id="yesbutton">
+                    <a class="waves-effect success waves-light btn xlarge strong circle center-text">
+                  Yes
+                  </a>
+                </div>
+                <br />
+                <div id="nobutton">
+                    <a class="waves-effect error waves-light btn xlarge strong circle center-text">
+                Nope
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="winResult">
+            <div id="winMsg">
+                <p>
+                    Well,you won it
+                </p>
+            </div>
+            <div id="winBottom">
+                <a class="restartButton waves-effect warning waves-light btn xlarge strong circle center-text">
+          Restart
+          </a>
+                <br />
+                <a id="helpButton" class="waves-effect success waves-light btn xlarge strong circle center-text">
+          HelpMe
+          </a>
+            </div>
+        </div>
+
+        <div id="loseResult">
+            <div id="loseMsg">
+                <p>
+                    ^_^ 
+                </p>
+                <p>
+I won
+                </p>
+            </div>
+            <div id="loseBottom">
+              <a class="restartButton waves-effect warning waves-light btn xlarge strong circle center-text">Restart</a>
+            </div>
+        </div>
+
+        <div id="helpMe">
+            <div id="helpMsg">
+                <p>
+                    Please Help Me More Smart :)
+                </p>
+            </div>
+            <div id="helpBottom">
+              <div class="row">
+                <div class="col-xs-10 col-center">
+                  <input id="thinkingThing" type="text" class="form-control center-text underline" placeholder="What is you thinking?">
+                  <h1>What question between <span id="helpEntity"></span> and <span id="helpThinking">(   )</span></h1>
+                  <input id="helpQuestion" type="text" class="form-control center-text underline" placeholder="What is you question?">
+                  <a id="helpDoneButton" class="waves-effect success waves-light btn xlarge strong circle center-text">Done</a>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="thank">
+          <div id="thankMsg">
+              <p>
+              Thank for your knowledge!
+              </p> 
+          </div>
+          <div id="thankBottom">
+          <a class="restartButton waves-effect warning waves-light btn xlarge strong circle center-text">Restart</a>
+          </div>
+        </div>
+
+    </div>
+
+    <script data-main="static/js/main.js" src="static/js/vendor/require.min.js"></script>
+</body>
+
+</html>
