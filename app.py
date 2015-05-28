@@ -11,16 +11,19 @@ setting = {
     'scheme': 'GuessGameEntity'
 }
 
-r = redis.StrictRedis(host='localhost', port=6379, db=0)
+redis_url = os.getenv('REDISTOGO_URL', 'redis://localhost:6379')
+redis = redis.from_url(redis_url)
+
+#r = redis.StrictRedis(host='localhost', port=6379, db=0)
 
 @app.route('/')
 def root():
     return app.send_static_file('index.html')
 
 
-# def hello():
-#     return u'Hello, I\' m Yes or No Guess-Game Server,' + \
-#            u' Dont\' attack me ^_^'
+def hello():
+    return u'Hello, I\' m Yes or No Guess-Game Server,' + \
+           u' Dont\' attack me ^_^'
 
 @app.route('/entity', methods=['POST'])
 def postEntity():
